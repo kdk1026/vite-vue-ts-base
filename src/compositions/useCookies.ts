@@ -4,7 +4,7 @@ const $cookies = (VueCookies as any);
 
 export interface CookieOptions {
     path?: string;
-    expire?: string | number | Date;
+    expires?: string | number | Date;
     maxAge?: number;
     domain?: string;
     secure?: boolean;
@@ -38,7 +38,7 @@ export const useCookies = () => {
         return $cookies.set(
             name,
             value,
-            updatedOptions.expire,
+            updatedOptions.expires,
             updatedOptions.path,
             updatedOptions.domain,
             updatedOptions.secure,
